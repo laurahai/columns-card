@@ -1,0 +1,146 @@
+/* RESET */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* VARIABLES */
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transp-white-parag: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray-bg-hd-btn: hsl(0, 0%, 95%);
+
+    --body-font: 0.9375rem;
+
+    --big-shoulders-font: 'Big Shoulders Display', cursive;
+    --lexend-deca-font: 'Lexend Deca', sans-serif;
+}
+
+/* MOBILE-FIRST DESIGN */
+.component {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    margin: 5rem 1rem;
+    border-radius: 0.6em;
+    overflow: hidden; /* for border-radius */
+    max-width: 400px;
+}
+
+.card-1, .card-2, .card-3 {
+    padding: 3.1em;
+}
+
+.vehicle-icon {
+    padding-bottom: 1.25em;
+}
+
+.card-title {
+    font-family: var(--big-shoulders-font);
+    font-variant-caps: all-small-caps;
+    color: var(--very-light-gray-bg-hd-btn);
+
+    font-size: 3.125rem;
+    letter-spacing: 0.01em;
+
+    padding-bottom: 0.5em;
+}
+
+.card-content {
+    font-family: var(--lexend-deca-font);
+    color: var(--transp-white-parag);
+    line-height: 1.7em;
+    padding-bottom: 1.6em;
+}
+
+.link {
+    display: block;
+    font-family: var(--lexend-deca-font);
+    background-color: var(--very-light-gray-bg-hd-btn);
+    padding: 0.8em;
+    border-radius: 4em;
+    text-align: center;
+    width: 160px;
+}
+
+
+.card-1, .card-1 > .link:hover {
+    background-color: var(--bright-orange);
+}
+
+.card-2, .card-2 > .link:hover {
+    background-color: var(--dark-cyan);
+}
+
+.card-3, .card-3 > .link:hover {
+    background-color: var(--very-dark-cyan);
+}
+
+.card-1 > .link {
+    color: var(--bright-orange);
+}
+
+.card-2 > .link {
+    color: var(--dark-cyan);
+}
+
+.card-3 > .link {
+    color: var(--very-dark-cyan);
+}
+
+.link:hover {
+    color: var(--very-light-gray-bg-hd-btn);
+    outline: 0.15em solid var(--very-light-gray-bg-hd-btn);
+}
+
+/* TABLET */
+@media screen and (min-width: 650px) and (max-width: 900px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+    }
+
+    .card-3 {
+        grid-column: span 2;
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
+
+/* DESKTOP */
+@media screen and (min-width: 900px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1000px;
+    }
+    .card-content {
+        padding-bottom: 4.5em;
+    }
+
+    .card-1, .card-2, .card-3 {
+        padding-right: 3.8em;
+    }
+}
