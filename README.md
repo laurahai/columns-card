@@ -4,7 +4,7 @@ Solution to the Frontend Mentor [3-column preview card component](https://www.fr
 ## The challenge  
 To build the 3-column card component so that it looks as close as possible to the design.  
 ![3-column card](./design/mobile-design.jpg)
-![3-column card](./design/mobile-design.jpg)
+![3-column card](./design/desktop-design.jpg)
 
 ## The solution  
 ### Built with  
